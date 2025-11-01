@@ -18,7 +18,7 @@ function Login({ onLogin }: LoginProps) {
 
     try {
       // Use API URL from environment variables
-      const apiUrl = import.meta.env.VITE_API_URL || 'https://dummyjson.com'
+      const apiUrl = process.env.REACT_APP_API_URL || 'https://dummyjson.com'
       const response = await fetch(`${apiUrl}/auth/login`, {
         method: 'POST',
         headers: {
